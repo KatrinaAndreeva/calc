@@ -1,51 +1,36 @@
 document.querySelectorAll('.number')
 .forEach( el => el.addEventListener('click', clickNumber));
-document.querySelector('.operation').addEventListener('click', operation);
+document.querySelector('.minus').addEventListener('click', minus);
+document.querySelector('.plus').addEventListener('click', plus);
+document.querySelector('.multiply').addEventListener('click', multiply);
+document.querySelector('.divide').addEventListener('click', divide);
+document.querySelector('.dot').addEventListener('click', dot);
 document.querySelector('.calc').addEventListener('click', calc);
 const display = document.querySelector('.display');
 
 function clickNumber(event) {
-    display.value += event.target.innerHTML;
+    display.value += event.target.innerText;
 }
 
-function operation() {
+
+function minus()  {
+    display.value += '-';
+}
+function plus()  {
     display.value += '+';
 }
+function multiply()  {
+    display.value += '*';
+}
+function divide()  {
+    display.value += '/';
+}
+function dot()  {
+    display.value += '.';
+}
+
+
 function calc() {
     display.value = eval(display.value);
 }
 
-
-// var powerCalc = new Calculator;
-// powerCalc.addMethod("*", function(a, b) {
-//   return a * b;
-// });
-// powerCalc.addMethod("/", function(a, b) {
-//   return a / b;
-// });
-// powerCalc.addMethod("**", function(a, b) {
-//   return Math.pow(a, b);
-// });
-
-// var result = powerCalc.calculate("2 ** 3");
-// alert( result ); // 8
-
-
-// 'use strict';
-
-// class User {
-//   constructor(firstName, lastName) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//   }
-
-//   static createGuest() {
-//     return new User("Гость", "Сайта");
-//   }
-// };
-
-// let user = User.createGuest();
-
-// alert( user.firstName ); // Гость
-
-// alert( User.createGuest ); // createGuest ... (функция)

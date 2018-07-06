@@ -5,6 +5,7 @@ document.querySelector('.plus').addEventListener('click', plus);
 document.querySelector('.multiply').addEventListener('click', multiply);
 document.querySelector('.divide').addEventListener('click', divide);
 document.querySelector('.dot').addEventListener('click', dot);
+document.querySelector('.clr').addEventListener('click', clr);
 document.querySelector('.calc').addEventListener('click', calc);
 const display = document.querySelector('.display');
 
@@ -27,6 +28,10 @@ function divide()  {
 }
 function dot()  {
     display.value += '.';
+}
+function clr() {
+    display.value = "";
+
 }
 
 
